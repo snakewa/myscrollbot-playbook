@@ -16,7 +16,7 @@
     - name: make sure main program running
       supervisorctl: 
         name: main
-        state: running 
+        state: started 
         supervisorctl_path: /usr/local/bin/supervisorctl
 
   handlers:
