@@ -17,6 +17,7 @@
       supervisorctl: 
         name: main
         state: started 
+        config: /etc/supervisor/supervisord.conf
         supervisorctl_path: /usr/local/bin/supervisorctl
 
   handlers:
@@ -24,4 +25,5 @@
       supervisorctl:
         name: main
         state: restarted 
+        config: /etc/supervisor/supervisord.conf
         supervisorctl_path: /usr/local/bin/supervisorctl
