@@ -32,7 +32,7 @@ while True:
     if msg != hostname:
         msg = hostname
         scrollphathd.clear()
-        scrollphathd.write_string(" *IP: " + msg.strip(), x=0, y=0, font=font5x7)
+        scrollphathd.write_string(" ** IP: " + msg.strip(), x=0, y=0, font=font5x7)
     scrollphathd.show()
     scrollphathd.scroll()
     time.sleep(0.01)
