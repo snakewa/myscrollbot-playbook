@@ -9,7 +9,7 @@
 
   tasks:
     - name: copy main program
-      copy: src=files/ips.py dest=/home/pi/main.py
+      copy: src=files/ips.py dest=/home/pi/main.py mode=0700
       notify:
       - restart main
 
