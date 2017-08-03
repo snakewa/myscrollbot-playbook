@@ -18,3 +18,4 @@
       supervisorctl:
         name: main
         state: restarted 
+        supervisorctl_path: /usr/local/bin/supervisorctl
