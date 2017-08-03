@@ -8,5 +8,13 @@
   connection: local # or ssh or paramiko
 
   tasks:
-    - name: copy hello
-      copy: src=templates/hello dest=/home/pi/hello
+    - name: copy main program
+      copy: src=files/ips.py dest=/home/pi/main.py
+      notify:
+      - restart main
+
+  handlers:
+    - name: restart main
+      supervisorctl:
+        name: main
+        state: restarted 
