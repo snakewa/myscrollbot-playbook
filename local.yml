@@ -13,6 +13,12 @@
       notify:
       - restart main
 
+    - name: make sure main program running
+      supervisorctl: 
+        name: main
+        state: running 
+        supervisorctl_path: /usr/local/bin/supervisorctl
+
   handlers:
     - name: restart main
       supervisorctl:
