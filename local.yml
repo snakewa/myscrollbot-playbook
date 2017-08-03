@@ -1,0 +1,12 @@
+---
+## Example for Ansible Pull
+## by Raymii.org
+
+- name: Ansible Example Pull Mode
+  hosts: localhost
+  user: root
+  connection: local # or ssh or paramiko
+
+  tasks:
+    - name: copy hello
+      copy: src=templates/hello dest=/home/pi/hello
